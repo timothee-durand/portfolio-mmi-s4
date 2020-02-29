@@ -1,24 +1,27 @@
 <template>
-    <div class=" w-full" style="position: relative;">
-
-        <div class="w-full" style="position: absolute; z-index: -100;background-color: gray;">
-            <div class="w-full" style="background-color: #009688; height: 127px;position: fixed; ">
-            </div>
-        </div>
-
-        <div class="container m-auto" style="position: relative;z-index: 100;height: calc(100% - 38px);top:19px;">
-            <InstantChat></InstantChat>
-        </div>
-    </div>
+  <div id="app">
+    <HelloWorld/>
+  </div>
 </template>
 
 <script>
-    import InstantChat from './InstantChat'
+import HelloWorld from './components/HelloWorld.vue'
 
-    export default {
-        name: 'App',
-        components: {
-            InstantChat
-        }
-    }
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

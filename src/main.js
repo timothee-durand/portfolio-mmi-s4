@@ -3,10 +3,7 @@ import App from './App.vue'
 
 import '@/assets/css/tailwind.css'
 
-Vue.config.productionTip = false;
-
-// Global eventbus
-Vue.prototype.$eventHub = new Vue();
+Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
