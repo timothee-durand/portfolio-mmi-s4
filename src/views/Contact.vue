@@ -4,19 +4,19 @@
     <p>You want to contact me ? Fill the form below or use my social account !</p>
     <form @submit.prevent="submitContact">
       <label class="label-text ml-2 " for="name-input">Name :</label>
-      <input type="text" placeholder="First Name" v-model="name" required id="name-input"
+      <input type="text" placeholder="John Doe" v-model="name" required id="name-input"
                class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 ">
 
       <label class="label-text ml-2 " for="email-input">Email :</label>
-      <input type="email" placeholder="Mail" v-model="mail" required id="email-input"
+      <input type="email" placeholder="johndoe@mail.com" v-model="mail" required id="email-input"
              class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3">
 
       <label class="label-text ml-2 " for="subject-input">Subject :</label>
-      <input type="text" placeholder="subject" v-model="subject" required id="subject-input"
+      <input type="text" placeholder="The subject you want to talk about" v-model="subject" required id="subject-input"
              class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3">
 
       <label class="label-text ml-2 " for="message-input">Message :</label>
-      <textarea placeholder="Message" cols="30" rows="7" v-model="message" id="message-input"
+      <textarea placeholder="Write your message..." cols="30" rows="7" v-model="message" id="message-input"
                 class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 "></textarea>
       <button type="submit" class="block rounded-full bg-secondary border-accent w-4/12 pt-2 pb-2 text-center m-auto mt-5">
         Submit
@@ -45,10 +45,10 @@ export default {
   name: "Contact",
   data() {
     return {
-      name: "test",
-      mail: "test@gmail.Com",
-      subject: "test",
-      message: "test",
+      name: "",
+      mail: "",
+      subject: "",
+      message: "",
       alertMsg: ""
     }
   },
