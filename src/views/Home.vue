@@ -23,8 +23,13 @@
 <script>
 // @ is an alias to /src
 
+import params from "@/param/params.js";
+
 export default {
   name: 'Home',
+  title(){
+    return params.baseTitle + "Home"
+  },
   components: {}
 }
 </script>

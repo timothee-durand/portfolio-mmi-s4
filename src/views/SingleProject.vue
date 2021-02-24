@@ -15,9 +15,13 @@
 
 
 import {mapGetters} from "vuex";
+import params from "@/param/params.js";
 
 export default {
   name: "SingleProject",
+  title(){
+    return params.baseTitle + "A project"
+  },
   data() {
     return {
       project: {

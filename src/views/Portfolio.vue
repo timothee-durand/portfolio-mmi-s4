@@ -13,9 +13,13 @@
 
 import ProjectCard from "@/components/ProjectCard.vue";
 import {mapGetters} from "vuex";
+import params from "@/param/params.js";
 export default {
   name: "Portfolio",
   components: {ProjectCard},
+  title(){
+    return params.baseTitle + "Portfolio"
+  },
   data() {
     return {
       allProjects2: []

@@ -25,9 +25,13 @@
 import Timeline from "@/components/Timeline.vue";
 import Skill from "@/components/Skill.vue";
 import {mapGetters} from "vuex";
+import params from "@/param/params.js";
 export default {
   name:"About",
   components: {Skill, Timeline},
+  title(){
+    return params.baseTitle + "About"
+  },
   computed: {
     ...mapGetters({skills:"getSkills", courses:"getCourses"})
   },

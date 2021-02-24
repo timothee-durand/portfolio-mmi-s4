@@ -15,8 +15,10 @@ import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 import anime from 'animejs/lib/anime.es.js';
 
+
 export default {
   name: "App",
+
   components: {Footer, Navbar},
   mounted() {
     //init data from Wordpress REST API

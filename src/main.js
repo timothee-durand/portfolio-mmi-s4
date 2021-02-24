@@ -5,6 +5,9 @@ import store from './store/store.js'
 import "@/plugins/mixins";
 import '@/assets/css/tailwind.css'
 
+import titleMixin from './mixins/title.js'
+Vue.mixin(titleMixin)
+
 Vue.config.productionTip = false
 Vue.use(require('vue-moment'));
 new Vue({
