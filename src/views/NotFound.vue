@@ -8,8 +8,13 @@
 </template>
 
 <script>
+import params from "@/param/params.js";
+
 export default {
-name: "NotFound"
+  name: "NotFound",
+  title() {
+    return params.baseTitle + "404"
+  }
 }
 </script>
 

@@ -6,7 +6,6 @@
     <transition @enter="leavePage">
       <router-view class="mt-16 lg:mt-8"/>
     </transition>
-
     <Footer></Footer>
   </div>
 </template>
@@ -14,6 +13,7 @@
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 import anime from 'animejs/lib/anime.es.js';
+
 
 
 export default {
@@ -50,25 +50,7 @@ export default {
     },
 
   },
-  beforeRouteLeave(to, from, next){
-    const overlay = this.$refs.overlay;
-    anime({
-      targets: overlay,
-      keyframes: [
-        {width: 0, translateX: 0},
-        {width: "100vw", translateX: 0},
-        {width: "100vw", translateX: "100vw"},
-        {width: "0", translateX: "100vw"},
-        {width: "0", translateX: "0"},
-      ],
-      duration: 2000,
-      complete: function () {
-        next()
-      },
-      easing: "easeOutQuad",
-      delay: 0
-    })
-  }
+
 
 }
 </script>

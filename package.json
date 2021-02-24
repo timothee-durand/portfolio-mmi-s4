@@ -12,6 +12,7 @@
     "animejs": "^3.2.1",
     "axios": "^0.21.1",
     "core-js": "^3.8.3",
+    "kursor": "^0.1.6",
     "tailwindcss-triangles": "^4.0.0",
     "vue": "^2.6.12",
     "vue-moment": "^4.1.0",
