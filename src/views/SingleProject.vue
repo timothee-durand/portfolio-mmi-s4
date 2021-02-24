@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lg:w-8/12">
     <img :src="project.acf.thumbnail " class="w-full" :alt="`Image from ${project.acf.title}`"/>
     <h2 class="font-serif font-bold text-3xl">{{ project.acf.title }}</h2>
     <p>{{ project.acf.subtitle }}</p>
@@ -7,7 +7,7 @@
     <article class="mt-6" v-html="project.acf.description"></article>
 
     <a :href="project.acf.url"
-       class="block rounded-full bg-secondary border-accent w-6/12 p-4 text-center m-auto mt-5"> Visit Website </a>
+       class="block rounded-full bg-secondary border-accent w-6/12 p-4 text-center m-auto mt-5 lg:w-4/12"> Visit Website </a>
   </div>
 </template>
 

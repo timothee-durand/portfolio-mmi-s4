@@ -1,8 +1,8 @@
 <template>
-  <div :class="{'m-5':!showName, 'm-2':showName }"  @click="_showName" class="transition-all ease-in-out duration-200">
-    <rounded-svg :height="'h-'+sizeHeight" :width="'w-'+sizeWidth" class="px-3 ">
-      <img :class="'w-'+(size-4)" :src="skill.picto"/>
-      <p v-if="showName" class="ml-3">{{ skill.nom }}</p>
+  <div class="transition-all ease-in-out duration-200 ">
+    <rounded-svg height="h-30" width="w-40" class="px-5 py-2">
+      <img class="h-10 " :src="skill.picto" :alt="`Picto de ${skill.nom}`"/>
+      <p class="ml-3">{{ skill.nom }}</p>
     </rounded-svg>
 
   </div>
@@ -16,7 +16,6 @@ export default {
   name: "Skill",
   components: {RoundedSvg},
   props: [
-    "size",
     "showName",
     "skill"
   ],
@@ -24,6 +23,7 @@ export default {
     return {
       sizeHeight: '',
       sizeWidth: "",
+
     }
   },
   mounted() {

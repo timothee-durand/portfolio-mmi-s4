@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="lg:w-8/12 mx-auto">
     <h2 class="text-3xl font-bold font-serif">Portfolio</h2>
     <p>Here are my latest projects, enjoy ! </p>
-    <div class="flex flex-col">
+    <div class="grid-cols-1 grid gap-3 w-full lg:grid-cols-3 lg:mt-5 ">
       <project-card v-for='project in allProjects ' :project="project"
-                    :key="project.id"></project-card>
+                    :key="project.id" class=""></project-card>
     </div>
   </div>
 </template>

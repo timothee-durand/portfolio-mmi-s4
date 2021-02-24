@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="mt-6">
     <h1 class="text-2xl font-bold font-serif">Contact</h1>
     <p>You want to contact me ? Fill the form below or use my social account !</p>

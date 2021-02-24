@@ -1,7 +1,7 @@
 <template>
-  <header class=" bg-primary-200 flex flex-row items-center justify-between w-full pt-3 px-3 fixed top-0 left-0 z-10">
+  <header class=" bg-primary-200 flex flex-row items-center justify-between w-full pt-3 px-3 z-10">
     <router-link to="/" exact>
-      <img src="@/assets/img/sombre.svg" class="w-12 pos" alt="logo timothée durand"/>
+      <img src="@/assets/img/sombre.svg" class="w-12 lg:z-20" alt="logo timothée durand"/>
     </router-link>
 
     <burger :pagesListe="pagesMenuBurger"></burger>

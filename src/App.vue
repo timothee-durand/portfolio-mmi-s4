@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-primary text-accent flex items-center justify-center flex-col p-3">
+  <div class="min-h-screen bg-primary text-accent flex items-center justify-between justify-center flex-col p-3">
     <navbar></navbar>
-    <router-view class="mt-16"/>
+    <router-view class="mt-16 lg:mt-8"/>
     <Footer></Footer>
   </div>
 </template>
