@@ -7,7 +7,7 @@
       <div>
         <h3 class="text-2xl font-bold font-serif lg:text-center">My skills</h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-5 w-full justify-items-center items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-5 w-full justify-items-center items-center mt-5">
           <skill v-for="skill in skills" :key="skill.id" :show-name="false"
                  :skill="skill.acf"></skill>
         </div>

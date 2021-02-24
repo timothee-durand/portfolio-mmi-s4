@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
+    "animejs": "^3.2.1",
     "axios": "^0.21.1",
     "core-js": "^3.8.3",
     "tailwindcss-triangles": "^4.0.0",
