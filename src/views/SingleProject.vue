@@ -20,7 +20,16 @@ export default {
   name: "SingleProject",
   data() {
     return {
-      project: {}
+      project: {
+        acf: {
+          thumbnail:"",
+          description:"",
+          keywords:"",
+          title:"",
+          url:"",
+          subtitle:""
+        }
+      }
     }
   },
   computed: {
@@ -34,14 +43,12 @@ export default {
         if (project.acf.slug === this.$route.params.slug) return true
       }.bind(this))
 
-      console.log(project)
-
-      if("acf" in project) {
+      //console.log("project", project)
+      if(project && "acf" in project) {
         this.project = project
       } else {
-        this.router.push("/404");
+        this.$router.push("/404");
       }
-
     }
   },
   mounted() {
@@ -49,6 +56,10 @@ export default {
   },
   beforeUpdate() {
     this.setProject()
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.setProject();
+    next();
   }
 }
 </script>
