@@ -8,18 +8,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "@tailwindcss/typography": "^0.4.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.3",
+    "tailwindcss-triangles": "^4.0.0",
+    "vue": "^2.6.12",
+    "vue-moment": "^4.1.0",
+    "vue-router": "^3.4.9",
+    "vuex": "^3.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.0",
-    "@vue/cli-plugin-eslint": "^4.2.0",
-    "@vue/cli-service": "^4.2.0",
-    "babel-eslint": "^10.0.3",
+    "@vue/cli-plugin-babel": "^4.5.10",
+    "@vue/cli-plugin-eslint": "^4.5.10",
+    "@vue/cli-service": "^4.5.10",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "tailwindcss": "^1.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "eslint-plugin-vue": "^6.2.2",
+    "tailwindcss": "^1.9.6",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,
