@@ -38,6 +38,7 @@ export default {
         }.bind(this),
         duration:500,
         easing: "easeOutQuad",
+        delay:0
       })
 
       timeline.add({targets:overlay, width: "100vw"});
