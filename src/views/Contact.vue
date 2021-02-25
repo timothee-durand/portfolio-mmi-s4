@@ -1,24 +1,25 @@
- <template>
+<template>
   <div class="mt-6">
     <h1 class="text-2xl font-bold font-serif">Contact</h1>
     <p>You want to contact me ? Fill the form below or use my social account !</p>
     <form @submit.prevent="submitContact">
       <label class="label-text ml-2 " for="name-input">Name :</label>
       <input type="text" placeholder="John Doe" v-model="name" required id="name-input"
-               class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 ">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg">
 
       <label class="label-text ml-2 " for="email-input">Email :</label>
       <input type="email" placeholder="johndoe@mail.com" v-model="mail" required id="email-input"
-             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg">
 
       <label class="label-text ml-2 " for="subject-input">Subject :</label>
       <input type="text" placeholder="The subject you want to talk about" v-model="subject" required id="subject-input"
-             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg">
 
       <label class="label-text ml-2 " for="message-input">Message :</label>
       <textarea placeholder="Write your message..." cols="30" rows="7" v-model="message" id="message-input"
-                class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 "></textarea>
-      <button type="submit" class="block rounded-full bg-secondary border-accent w-4/12 pt-2 pb-2 text-center m-auto mt-5">
+                class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg"></textarea>
+      <button type="submit"
+              class="block rounded-full bg-secondary border-accent w-4/12 pt-2 pb-2 text-center m-auto mt-5">
         Submit
       </button>
     </form>
@@ -63,9 +64,17 @@ export default {
       params.append("subject", this.subject);
       params.append("message", this.message);
 
-      axios.post("https://portfolio.timotheedurand.fr/contact.php", params).then(res => this.showAlert(res.data)).catch(err => {
-        this.showAlert(err.data)
-      })
+      axios.post("https://portfolio.timotheedurand.fr/contact.php", params)
+          .then(res => {
+            this.showAlert(res.data)
+            this.name = ""
+            this.mail = ""
+            this.subject = ""
+            this.message = ""
+          })
+          .catch(err => {
+            this.showAlert(err.data)
+          })
 
 
     },
@@ -81,16 +90,20 @@ export default {
 </script>
 
 <style scoped>
-  .label-text {
-    font-size: 12px;
-  }
+.label-text {
+  font-size: 12px;
+}
 
-  .slide-enter-active, .slide-leave-active {
-    transition: transform .3s ease-out;
-    will-change:transform;
-  }
+input::placeholder, textarea::placeholder {
+  opacity: 0.9;
+}
 
-  .slide-enter, .slide-leave-active {
-    transform: translateY(-100%);
-  }
+.slide-enter-active, .slide-leave-active {
+  transition: transform .3s ease-out;
+  will-change: transform;
+}
+
+.slide-enter, .slide-leave-active {
+  transform: translateY(-100%);
+}
 </style>
