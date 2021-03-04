@@ -94,7 +94,8 @@ export default {
       this.openMenu()
     },
     onResize() {
-      if (window.innerWidth > params.breakpointLaptop) this.show = true;
+      //ajuste visibilité menu
+      this.show = window.innerWidth > params.breakpointLaptop;
     },
     calculateValues() {
       const w = window.innerWidth;
