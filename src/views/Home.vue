@@ -7,15 +7,20 @@
       <p class="font-serif font-medium text-2xl">I'm a french futur front-end and fullstack developper</p>
       <p class="font-sans inline-flex flex-wrap items-center	 text-lg">You can check my project
         <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/portfolio">here</router-link>
+      </p>
 
-        If you want to know a bit more about me it's
-        <router-link class="inline-block  p-1 rounded-sm link-bg mx-1" to="/about">here</router-link>
 
+      <p class="font-sans inline-flex  items-center text-lg">You can know more about me <router-link class="inline-block  p-1 rounded-sm link-bg mx-1 " to="/about">here</router-link>
+      </p>
+      <p class="font-sans inline-flex flex-wrap items-center	 text-lg mt-1">
         To contact me you can come
         <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/contact">here</router-link>
-
+      </p>
+      <p class="font-sans inline-flex flex-wrap items-center	mt-1 text-lg">
         And to stay in touch follow me on my social media !
       </p>
+
+
     </div>
   </div>
 </template>
@@ -71,11 +76,11 @@ export default {
   color: #762b32;
 }
 
-.link-bg:hover::after{
- transform: translate(0);
+.link-bg:hover::after {
+  transform: translate(0);
 }
 
-.link-bg:hover::before{
+.link-bg:hover::before {
   transform: translate(100%);
 }
 

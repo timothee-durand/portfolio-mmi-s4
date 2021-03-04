@@ -4,7 +4,7 @@
     <p>Here are my latest projects, enjoy ! </p>
     <div class="grid-cols-1 grid gap-3 w-full lg:grid-cols-3 lg:mt-5 ">
       <project-card v-for='project in allProjects ' :project="project"
-                    :key="project.id" class="z-10"></project-card>
+                    :key="project.id" class="z-2"></project-card>
     </div>
   </div>
 </template>
@@ -32,5 +32,7 @@ export default {
 </script>
 
 <style scoped>
-
+.z-2 {
+  z-index: 2;
+}
 </style>

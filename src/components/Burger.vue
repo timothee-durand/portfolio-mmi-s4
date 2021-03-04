@@ -1,20 +1,20 @@
 <template>
-  <div>
-    <div class="lg:hidden block relative">
+  <div >
+    <div class="lg:hidden block relative ">
       <div class="burger-menu" @click="toggleBurger" :class="{'menu-on':show}">
         <div class="burger"></div>
       </div>
       <div
-          class="bg-secondary rounded-full flex items-center justify-center bg-menu block w-12 h-12 overflow-hidden"
+          class="bg-secondary rounded-full flex items-center justify-center bg-menu block w-12 h-12 overflow-hidden z-20"
           ref="bg-menu">
       </div>
 
     </div>
     <transition name="slide">
       <div
-          class="h-screen w-full flex flex-col items-center justify-around absolute z-10 top-0 left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent"
+          class="h-screen w-full z-20 flex flex-col items-center justify-around absolute z-10 top-0 left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent "
           v-if="show">
-        <div class="w-6/12 h-64 lg:h-10 lg:w-4/12  flex flex-col justify-around lg:flex-row">
+        <div class="w-6/12 h-64 lg:h-10 lg:w-4/12   flex flex-col justify-around lg:flex-row">
           <router-link v-for="page in pagesAffichees" :key="page.path" :to="'/'+page.path"
                        exact-active-class="active-page"
                        class="font-bold text-3xl font-serif capitalize lg:text-2xl link-header">
