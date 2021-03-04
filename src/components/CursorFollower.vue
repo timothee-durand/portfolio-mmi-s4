@@ -39,19 +39,24 @@ name: "CursorFollower",
 </script>
 
 <style scoped>
-#dot {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #efc153;
-  border-radius: 50%;
+@media (pointer:fine) {
+  #dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #efc153;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  #circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #efc153;
+    border-radius: 50%;
+    z-index: 0;
+  }
 }
 
-#circle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #efc153;
-  border-radius: 50%;
-}
 </style>
