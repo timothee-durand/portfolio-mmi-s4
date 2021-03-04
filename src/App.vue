@@ -1,9 +1,10 @@
 <template>
-  <div class="min-h-screen bg-primary text-accent flex items-center justify-between justify-center flex-col p-3"
+  <div class="min-h-screen bg-primary text-accent flex items-center justify-between justify-center flex-col p-3 overflow-hidden"
        ref="body">
-    <div id="overlay" class="h-screen bg-accent absolute top-0 left-0 z-30" ref="overlay"></div>
+      <div id="overlay" class="h-screen bg-accent z-30  absolute top-0 left-0" ref="overlay"></div>
     <navbar></navbar>
-    <transition @enter="leavePage">
+    <CursorFollower/>
+    <transition name="fade" mode="out-in">
       <router-view class="mt-16 lg:mt-8"/>
     </transition>
     <Footer></Footer>
@@ -12,50 +13,36 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
-import anime from 'animejs/lib/anime.es.js';
+
+
+import CursorFollower from "@/components/CursorFollower.vue";
 
 
 
 export default {
   name: "App",
 
-  components: {Footer, Navbar},
+  components: {CursorFollower, Footer, Navbar},
   mounted() {
     //init data from Wordpress REST API
     this.$store.dispatch("initData");
   },
-  methods: {
-    leavePage(el, done) {
-      const overlay = this.$refs.overlay;
-
-      let timeline = anime.timeline({
-        complete: function(){
-          this.$root.$el.classList.remove("overflow-hidden")
-          done()
-        }.bind(this),
-        begin:function (){
-          this.$root.$el.classList.add("overflow-hidden")
-        }.bind(this),
-        duration:500,
-        easing: "easeOutQuad",
-        delay:0
-      })
-
-      timeline.add({targets:overlay, width: "100vw"});
-      timeline.add({targets:overlay, width: "100vw", translateX: "100vw"});
-      timeline.add({targets:overlay, width: "0", translateX: "100vw"});
-      timeline.add(  {targets:overlay, width: "0", translateX: "0"});
-
-      timeline.play();
-
-    },
-
-  },
+  methods: {},
 
 
 }
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rokkitt:wght@400;500;700&display=swap');
+.fade-enter-active, .fade-leave-active {
+  transition: transform ease-in .5s;
+}
 
+.fade-enter {
+  transform: translateX(300%);
+}
+
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-300%);
+}
 </style>

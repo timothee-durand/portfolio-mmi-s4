@@ -12,7 +12,7 @@
     </div>
     <transition name="slide">
       <div
-          class="h-screen w-screen flex flex-col items-center justify-around absolute z-10 top-0 left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent"
+          class="h-screen w-full flex flex-col items-center justify-around absolute z-10 top-0 left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent"
           v-if="show">
         <div class="w-6/12 h-64 lg:h-10 lg:w-4/12  flex flex-col justify-around lg:flex-row">
           <router-link v-for="page in pagesAffichees" :key="page.path" :to="'/'+page.path"
@@ -66,9 +66,6 @@ export default {
     this.calculateValues();
     this.onResize();
   },
-  updated() {
-    this.onResize()
-  },
   computed: {
     pagesAffichees: function () {
       return this.pagesListe;
@@ -85,6 +82,7 @@ export default {
       }
     },
     closeBurger() {
+      if( window.innerWidth > params.breakpointLaptop) return;
       this.show = false;
       this.closeMenu()
     },
