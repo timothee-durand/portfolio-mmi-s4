@@ -99,10 +99,7 @@ export default {
     calculateValues() {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      //const cssStyles = getComputedStyle(elem);
-      //const offsetValue = Number(cssStyles.getPropertyValue('--offset-value'));
-      const offsetValue = Number(getComputedStyle(this.$refs["bg-menu"]).getPropertyValue('--offset-value'));
-
+      const offsetValue = 25;
       //  Offsets to center the circle
       this.offsetX = (w / 2) - (this.$refs["bg-menu"].getBoundingClientRect().width / 2) - offsetValue;
       this.offsetY = (h / 2) - (this.$refs["bg-menu"].getBoundingClientRect().height / 2) - offsetValue;
