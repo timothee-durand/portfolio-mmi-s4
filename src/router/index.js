@@ -6,6 +6,7 @@ import SingleProject from "@/views/SingleProject.vue";
 import Contact from "@/views/Contact.vue";
 import Portfolio from "@/views/Portfolio.vue";
 import NotFound from "@/views/NotFound.vue";
+import Legals from "@/views/Legals.vue";
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,7 @@ const routes = [
     {path: '/about', name: 'About', component: About},
     {path: '/project/:slug', name: 'SingleProject', component: SingleProject},
     {path: '/contact', name: 'Contact', component: Contact},
+    {path: '/legals', name: 'Legals', component: Legals},
     {path: '*', name: "404", component: NotFound}
 ]
 
