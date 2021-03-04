@@ -39,7 +39,7 @@ name: "CursorFollower",
 </script>
 
 <style scoped>
-@media (pointer:fine) {
+@media (min-width: 800px) {
   #dot {
     position: absolute;
     width: 4px;
