@@ -6,13 +6,9 @@
 
         <h3 class="font-serif font-bold text-3xl leading-6">{{ project.acf.title }}</h3>
         <p class="font-sans text-1xl">{{ project.acf.subtitle }}</p>
-
-
       </div>
     </div>
   </router-link>
-  <!--  http://localhost:8080/uploads/pictum.jpg-->
-
 </template>
 
 <script>
@@ -36,6 +32,7 @@ export default {
   -webkit-background-size: 100%;
   background-size: 100%;
 }
+
 .bg-project:hover {
   background-size:120%;
 }
