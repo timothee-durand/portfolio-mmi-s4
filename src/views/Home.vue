@@ -2,18 +2,18 @@
   <div class="container p-6 md:flex items-center flex-row-reverse justify-center m-0 mb-20">
     <img alt="Timothée DURAND" class=" w-6/12 m-auto md:m-0 md:ml-16" src="@/assets/img/timothee_durand.png"
          style="max-width: 260px;"/>
-    <div>
+    <div class="max-w-md">
       <h1 class="font-serif font-bold text-4xl mt-5">Hey ! I'm Timothée DURAND</h1>
       <p class="font-serif font-medium text-2xl">I'm a french futur front-end and fullstack developper</p>
-      <p class="font-sans inline-flex flex-wrap items-center	 text-lg">You can check my project
+      <p class="font-sans inline-flex flex-wrap items-center	 text-lg">You can check my <strong  class="mx-1">projects</strong>
         <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/portfolio">here</router-link>
       </p>
 
-
-      <p class="font-sans inline-flex  items-center text-lg">You can know more about me <router-link class="inline-block  p-1 rounded-sm link-bg mx-1 " to="/about">here</router-link>
+      <p class="font-sans inline-flex  items-center text-lg mt-1">You can know more <strong  class="mx-1">about me</strong>
+        <router-link class="inline-block  p-1 rounded-sm link-bg mx-1 " to="/about">here</router-link>
       </p>
       <p class="font-sans inline-flex flex-wrap items-center	 text-lg mt-1">
-        To contact me you can come
+        To <strong class="mx-1">contact</strong>  me you can come
         <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/contact">here</router-link>
       </p>
       <p class="font-sans inline-flex flex-wrap items-center	mt-1 text-lg">

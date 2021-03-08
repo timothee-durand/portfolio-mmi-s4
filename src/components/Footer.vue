@@ -1,5 +1,5 @@
 <template>
-  <footer class=" p-6  w-full mx-auto  md:max-w-3xl">
+  <footer class=" p-6  w-full mx-auto  md:max-w-3xl z-10">
     <div class="flex justify-around align-center">
       <rounded-svg width="w-12" height="h-12">
         <a href="https://github.com/timothee-durand">

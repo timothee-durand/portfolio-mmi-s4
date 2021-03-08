@@ -1,7 +1,7 @@
 <template>
   <div >
     <div class="lg:hidden block relative ">
-      <div class="burger-menu" @click="toggleBurger" :class="{'menu-on':show}">
+      <div class="burger-menu z-30 " @click="toggleBurger" :class="{'menu-on':show}">
         <div class="burger"></div>
       </div>
       <div
@@ -12,7 +12,8 @@
     </div>
     <transition name="slide">
       <div
-          class="h-screen w-full z-20 flex flex-col items-center justify-around absolute z-10 top-0 left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent "
+          class="h-screen w-full z-20 flex flex-col items-center justify-around absolute z-10 top-0
+          left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent "
           v-if="show">
         <div class="w-6/12 h-64 lg:h-10 lg:w-4/12   flex flex-col justify-around lg:flex-row">
           <router-link v-for="page in pagesAffichees" :key="page.path" :to="'/'+page.path"
@@ -119,7 +120,11 @@ export default {
       this.$refs["bg-menu"].style.setProperty("--scale", 1);
       this.$refs["bg-menu"].style.setProperty("--translate-x", 0);
       this.$refs["bg-menu"].style.setProperty("--translate-y", 0);
-      this.$root.$el.classList.remove("overflow-hidden")
+
+      setTimeout(function (){
+        this.$root.$el.classList.remove("overflow-hidden")
+      }, 300)
+
     }
   },
 }
@@ -186,6 +191,7 @@ a.link-header:hover, a.link-header:focus {
   content: "";
   display: block;
   border-radius: 10px;
+
 }
 
 .burger::before {

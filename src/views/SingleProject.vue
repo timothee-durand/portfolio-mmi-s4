@@ -7,7 +7,7 @@
     <article class="mt-6" v-html="project.acf.description"></article>
 
     <a :href="project.acf.url"
-       class="block rounded-full bg-secondary border-accent w-6/12 p-4 text-center m-auto mt-5 lg:w-4/12"> Visit Website </a>
+       class="block rounded-full bg-secondary border-accent w-6/12 p-4 text-center m-auto mt-5 lg:w-4/12 z-10 relative"> Visit Website </a>
   </div>
 </template>
 
@@ -38,8 +38,6 @@ export default {
   },
   computed: {
     ...mapGetters({allProjects:"getProjects"}),
-
-
   },
   methods: {
     setProject() {
