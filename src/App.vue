@@ -33,7 +33,7 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rokkitt:wght@400;500;700&display=swap');
+
 .fade-enter-active, .fade-leave-active {
   transition: transform ease-in .5s;
 }

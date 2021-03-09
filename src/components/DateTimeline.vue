@@ -6,15 +6,14 @@
       <div class="ml-2 md:ml-4 flex-1 border-secondary border-2 rounded-md">
         <p class="font-medium font-serif md:text-xl bg-secondary p-3">{{ name }}</p>
         <div class=" bg-white text-black p-3 rounded-b-md">
-          {{ dateDebut | moment("YYYY") }} - {{ dateFin | moment("YYYY") }}
+          {{ dateDebut | dayjs("YYYY") }} - {{ dateFin | dayjs("YYYY") }}
         </div>
       </div>
     </div>
   </li>
 </template>
+
 <script>
-
-
 export default {
   name: 'date-timeline',
   props: {
