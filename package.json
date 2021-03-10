@@ -1,7 +1,7 @@
 {
-  "name": "tail-wind-with-vue-starter",
+  "name": "portfolio-mmi-s4",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,7 +11,7 @@
     "@tailwindcss/typography": "^0.4.0",
     "axios": "^0.21.1",
     "core-js": "^3.8.3",
-    "tailwindcss-triangles": "^4.0.0",
+    "dayjs": "^1.10.4",
     "vue": "^2.6.12",
     "vue-moment": "^4.1.0",
     "vue-router": "^3.4.9",
@@ -25,6 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "tailwindcss": "^1.9.6",
+    "tailwindcss-triangles": "^4.0.0",
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
