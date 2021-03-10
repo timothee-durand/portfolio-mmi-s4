@@ -5,14 +5,14 @@
         <div class="burger"></div>
       </div>
       <div
-          class="bg-secondary rounded-full flex items-center justify-center bg-menu block w-12 h-12 overflow-hidden z-20"
+          class="bg-secondary rounded-full flex items-center justify-center bg-menu block w-12 h-12 overflow-hidden "
           ref="bg-menu">
       </div>
 
     </div>
     <transition name="slide">
       <div
-          class="h-screen w-full z-20 flex flex-col items-center justify-around absolute z-10 top-0
+          class="h-screen w-full flex flex-col items-center justify-around absolute top-0
           left-0 lg:flex lg:justify-items-end lg:items-end lg:h-20 lg:bg-transparent "
           v-if="show">
         <div class="w-6/12 h-64 lg:h-10 lg:w-4/12   flex flex-col justify-around lg:flex-row">

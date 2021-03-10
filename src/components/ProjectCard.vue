@@ -5,12 +5,11 @@
       <div class="bg-secondary bg-opacity-75 p-10 flex flex-col  justify-center h-full ">
         <h3 class="font-serif font-bold text-3xl leading-6">{{ project.acf.title }}</h3>
         <p class="font-sans text-1xl">{{ project.acf.subtitle }}</p>
-        <div class="flex lg:hidden">
-          <p><strong>Keywords :</strong></p>
-          <ul class="list-none p-0 m-0 flex ml-2 flex-wrap">
+          <ul class="list-none p-0 m-0 flex flex-wrap lg:hidden">
+            <li class="mr-2"><strong>Keywords :</strong></li>
             <li v-for="(keyword, index) in keywordsArray" :key="keyword+index" class="mr-2 font-serif underline ">{{keyword }}</li>
           </ul>
-        </div>
+
 
       </div>
     </div>

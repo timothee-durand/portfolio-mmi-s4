@@ -5,19 +5,19 @@
     <form @submit.prevent="submitContact">
       <label class="label-text ml-2 " for="name-input">Name :</label>
       <input type="text" placeholder="John Doe" v-model="name" required id="name-input"
-             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg z-10 relative">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg md:z-10 relative">
 
       <label class="label-text ml-2 " for="email-input">Email :</label>
       <input type="email" placeholder="johndoe@mail.com" v-model="mail" required id="email-input"
-             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg z-10 relative">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg md:z-10 relative">
 
       <label class="label-text ml-2 " for="subject-input">Subject :</label>
       <input type="text" placeholder="The subject you want to talk about" v-model="subject" required id="subject-input"
-             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg z-10 relative">
+             class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg md:z-10 relative">
 
       <label class="label-text ml-2 " for="message-input">Message :</label>
       <textarea placeholder="Write your message..." cols="30" rows="7" v-model="message" id="message-input"
-                class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg z-10 relative"></textarea>
+                class="w-full border-accent rounded-sm bg-secondary text-accent placeholder-accent ring-2 max-w-sm m-auto block p-2 mb-3 md:max-w-lg md:z-10 relative"></textarea>
       <button type="submit"
               class="block rounded-full bg-secondary border-accent w-4/12 pt-2 pb-2 text-center m-auto mt-5 relative z-10">
         Submit
