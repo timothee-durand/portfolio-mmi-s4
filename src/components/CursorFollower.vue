@@ -7,7 +7,7 @@
 
 <script>
 export default {
-name: "CursorFollower",
+  name: "CursorFollower",
   mounted() {
     const dot = this.$refs.dot;
     const circle = this.$refs.circle
@@ -18,7 +18,7 @@ name: "CursorFollower",
     let _x = 0;
     let _y = 0;
 //
-    document.onmousemove = (event)=> {
+    document.onmousemove = (event) => {
       endX = event.pageX;
       endY = event.pageY;
       dot.style.top = endY - 6 + "px";
@@ -47,6 +47,7 @@ name: "CursorFollower",
     background-color: #efc153;
     border-radius: 50%;
     z-index: 0;
+    pointer-events: none;
   }
 
   #circle {
@@ -56,6 +57,7 @@ name: "CursorFollower",
     border: 1px solid #efc153;
     border-radius: 50%;
     z-index: 0;
+    pointer-events: none;
   }
 }
 

@@ -28,14 +28,19 @@ export default {
           order: 1
         },
         {
+          name: "lab",
+          path:'pens',
+          order: 2
+        },
+        {
           name: "about",
           path: "about",
-          order: 2
+          order: 3
         },
         {
           name: "contact",
           path:"contact",
-          order: 3
+          order: 4
         }
       ]
     }

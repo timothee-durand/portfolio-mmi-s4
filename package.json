@@ -13,6 +13,7 @@
     "core-js": "^3.8.3",
     "dayjs": "^1.10.4",
     "vue": "^2.6.12",
+    "vue-codepen": "^0.2.1",
     "vue-moment": "^4.1.0",
     "vue-router": "^3.4.9",
     "vuex": "^3.6.0"

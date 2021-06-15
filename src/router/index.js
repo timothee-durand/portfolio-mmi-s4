@@ -7,14 +7,18 @@ import Contact from "@/views/Contact.vue";
 import Portfolio from "@/views/Portfolio.vue";
 import NotFound from "@/views/NotFound.vue";
 import Legals from "@/views/Legals.vue";
+import Pens from "../views/Pens";
+import SinglePen from "../views/SinglePen";
 
 Vue.use(VueRouter)
 
 const routes = [
     {path: '/', name: 'Home', component: Home},
     {path: '/portfolio', name: 'Portfolio', component: Portfolio},
+    {path: '/pens', name: 'Pens', component: Pens},
     {path: '/about', name: 'About', component: About},
     {path: '/project/:slug', name: 'SingleProject', component: SingleProject},
+    {path: '/pen/:slug', name: 'SinglePen', component: SinglePen},
     {path: '/contact', name: 'Contact', component: Contact},
     {path: '/legals', name: 'Legals', component: Legals},
     {path: '*', name: "404", component: NotFound}
