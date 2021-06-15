@@ -3,7 +3,7 @@
     <h2 class="text-3xl font-bold font-serif">Lab</h2>
     <p>Here are my latest tests and creations on <a href="https://codepen.io/">Codepen</a>, enjoy ! </p>
     <div class="grid-cols-1 grid gap-3 w-full lg:grid-cols-3 lg:mt-5 ">
- 
+
     </div>
   </div>
 </template>
