@@ -9,6 +9,9 @@
         <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/portfolio">here</router-link>
       </p>
 
+      <p class="font-sans inline-flex flex-wrap items-center	 text-lg">You can check my tests in the <strong  class="mx-1">lab</strong>
+        <router-link class="inline-block p-1 rounded-sm link-bg mx-1" to="/lab">here</router-link>
+      </p>
       <p class="font-sans inline-flex  items-center text-lg mt-1">You can know more <strong  class="mx-1">about me</strong>
         <router-link class="inline-block  p-1 rounded-sm link-bg mx-1 " to="/about">here</router-link>
       </p>

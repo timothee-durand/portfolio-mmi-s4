@@ -3,8 +3,7 @@
     <div :style="'background-image: url(\''+pen.acf.acf_pen_url+'/image/small.png\');'"
          class="border-accent border-2 bg-center bg-cover bg-scroll h-full bg-project">
       <div class="bg-secondary bg-opacity-75 p-10 flex flex-col  justify-center h-full ">
-        <h3 class="font-serif font-bold text-3xl leading-6">{{ pen.acf.acf_pen_title }}</h3>
-        <p class="font-sans text-1xl">{{ pen.acf.acf_pen_description }}</p>
+        <h3 class="font-serif font-bold text-3xl leading-6 mt-6 mb-6">{{ pen.acf.acf_pen_titre }}</h3>
       </div>
     </div>
   </router-link>

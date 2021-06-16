@@ -29,7 +29,7 @@ export default {
         },
         {
           name: "lab",
-          path:'pens',
+          path:'lab',
           order: 2
         },
         {

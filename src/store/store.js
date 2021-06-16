@@ -46,6 +46,11 @@ export default new Vuex.Store({
         getPens(context) {
             return context.pens
         },
+        getPen(context, slug) {
+            return context.pens.find(function (pen) {
+                if (pen.acf.acf_pen_slug === slug) return true
+            })
+        }
     },
     actions: {
         async fetchProjects({commit}, config) {
