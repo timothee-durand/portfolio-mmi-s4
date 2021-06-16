@@ -108,9 +108,17 @@ class CoursesApiService extends ReadOnlyApiService {
     }
 }
 
+//pens
+class PenApiService extends ReadOnlyApiService {
+    constructor() {
+        super("pen");
+    }
+}
+
 export const $api = {
     projects: new ProjectsApiService(),
     skills: new SkillsApiService(),
-    courses: new CoursesApiService()
+    courses: new CoursesApiService(),
+    pens : new PenApiService()
 };
 
