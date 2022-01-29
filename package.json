@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "core-js": "^3.8.3",
     "dayjs": "^1.10.4",
+    "follow-redirects": "^1.14.7",
+    "glob-parent": "^6.0.2",
     "vue": "^2.6.12",
     "vue-codepen": "^0.2.1",
     "vue-moment": "^4.1.0",
