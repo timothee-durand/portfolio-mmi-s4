@@ -23,11 +23,6 @@ export default {
   name: "App",
 
   components: {CursorFollower, Footer, Navbar},
-  mounted() {
-    //init data from Wordpress REST API
-    this.$store.dispatch("initData");
-  },
-  methods: {},
 
 
 }
